@@ -1,0 +1,105 @@
+include header
+    div(class = 'adminWin')
+        table(class = 'table')
+                tr
+                    th(class = 'tableHead') id
+                    th(class = 'tableHead') Name
+                    th(class = 'tableHead') Brand
+                    th(class = 'tableHead') Category
+                    th(class = 'tableHead') Sex
+                    th(class = 'tableHead') Description
+                    th(class = 'tableHead') MainImage
+                    th(class = 'tableHead') Price
+                    th(class = 'tableHead') img1 
+                    th(class = 'tableHead') img2
+                    th(class = 'tableHead') img3
+                    th(class = 'tableHead') img4
+                    th(class = 'tableHead') img cart
+                     th(class = 'tableHead') actoion
+                each val in goods
+                    tr
+                        td(class = 'tdInfo' id = 'id' + val['id'])  #{val['id']}
+                        td(class = 'tdInfo' id = 'name' + val['id']) #{val['name']}
+                        td(class = 'tdInfo' id = 'brand' + val['id']) #{val['brand']}
+                        td(class = 'tdInfo' id = 'category' + val['id']) #{val['category']}
+                        td(class = 'tdInfo' id = 'sex' + val['id']) #{val['sex']}
+                        td(class = 'tdInfo' id = 'description' + val['id']) #{val['description']}
+                        td(class = 'tdInfo' id = 'image' + val['id']) #{val['image']}
+                        td(class = 'tdInfo' id = 'price' + val['id']) #{val['price']}
+                        td(class = 'tdInfo' id = 'img1' + val['id']) #{val['image1']}
+                        td(class = 'tdInfo' id = 'img2' + val['id']) #{val['image2']}
+                        td(class = 'tdInfo' id = 'img3' + val['id']) #{val['image3']}
+                        td(class = 'tdInfo' id = 'img4' + val['id']) #{val['image4']}
+                        td(class = 'tdInfo' id = 'imgCart' + val['id']) #{val['cartImage']}
+                        td(class = 'tdInfo') 
+                            button(class = 'buttonActions' onclick = 'deleteGoods(' +  val['id'] + ')')
+                                img(src="images/const_img/delete.svg", alt="")
+                            button(class = 'buttonActions' onclick = 'openEditFormE(' + val['id'] + ')')
+                                img(src="images/const_img/edit.svg", alt="")
+        button(class = 'adminBut' onclick = 'openEditForm()') Add
+    div(class = 'editWin' id = 'winEdit') 
+        div(class = 'editCon') 
+            p Id:
+            input(type="text" id = 'id')
+            p Name:
+            input(type="text" id = 'name')
+            p Brand:
+            input(type="text" id = 'brand')
+            p Category:
+            input(type="text" id = 'category')
+            p Sex:
+            input(type="text" id = 'sex')
+            p Description:
+            textarea(type="text" id = 'descrip')
+            p Main Image:
+            input(type="text" id = 'mainImg')
+            p Price:
+            input(type="text" id = 'price')
+            p image1:
+            input(type="text" id = 'img1')
+            p image2:
+            input(type="text" id = 'img2')
+            p image3:
+            input(type="text" id = 'img3')  
+            p image4:
+            input(type="text" id = 'img4')  
+            p imageCart:
+            input(type="text" id = 'imgCart') 
+            button(class = 'closeEdit' onclick = 'closeEditForm()') 
+                img(src="images/const_img/close-svg.svg", alt="") 
+            button(onclick = ('setDBItem()')) Add   
+    div(class = 'editWin1' id = 'winEditE') 
+        div(class = 'editCon') 
+            p Name:
+            input(type="text" id = 'nameE')
+            p Brand:
+            input(type="text" id = 'brandE')
+            p Category:
+            input(type="text" id = 'categoryE')
+            p Sex:
+            input(type="text" id = 'sexE')
+            p Description:
+            textarea(type="text" id = 'descripE')
+            p Main Image:
+            input(type="text" id = 'mainImgE')
+            p Price:
+            input(type="text" id = 'priceE')
+            p image1:
+            input(type="text" id = 'img1E')
+            p image2:
+            input(type="text" id = 'img2E')
+            p image3:
+            input(type="text" id = 'img3E')  
+            p image4:
+            input(type="text" id = 'img4E')  
+            p imageCart:
+            input(type="text" id = 'imgCartE') 
+            button(class = 'closeEdit' onclick = 'closeEditFormE()') 
+                img(src="images/const_img/close-svg.svg", alt="") 
+            button(onclick = ('editDBItem()')) Edit 
+            
+
+
+
+script(src="JS/admin.js" type='text/javascript')
+                

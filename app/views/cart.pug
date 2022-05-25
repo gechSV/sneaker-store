@@ -1,0 +1,21 @@
+include navigation 
+//- h1 #{goods[0].name}
+div(class = 'allCartWin')
+    div(class = 'cartCon')
+        each val in goods
+            div(class = 'cartConItem')
+                div(class = 'cartConItemPhoto')
+                    img(src="images/goods_photo_800x650/" + val['cartImage'], alt="")
+                div(class = 'cartConItemInfo')
+                    div(class = 'cartConItemInfoName')  #{val['name']}
+                    div(class = 'cartConItemInfoPrice') #{val['price']} ₽
+                    div(class = 'cartConItemInfoDescription') #{val['description']}
+                    div(class = 'cartConItemInfoSize') size: #{val['size']} EU
+    div(class = 'orderInfo')
+        div(class = 'TotalCart') in total
+        div(class = 'TotalPrice') #{total}₽
+        div(class = 'TotalCart') Delivery
+        div(class = 'TotalPrice') 700₽
+        button(class = 'payCart') 
+            img(src="images/const_img/PayPal.svg", alt="")
+include footer 

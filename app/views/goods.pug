@@ -1,0 +1,46 @@
+include navigation
+div(class = 'goods-con-all')
+    div(class = 'goods-con')
+        div(class = 'slider-conteiner-goods')
+            div(class = 'slider-goods')
+                button(class = 'heart')
+                    img(src="images/const_img/heartItemOrange.svg", alt="") 
+                div(class = 'slider-line-goods')
+                    img(id = 'img_goods_1' src="images/goods_photo_800x650/"+photo[0]['image1'], alt="")
+                    img(id = 'img_goods_2' src="images/goods_photo_800x650/"+photo[0]['image2'], alt="")
+                    img(id = 'img_goods_3' src="images/goods_photo_800x650/"+photo[0]['image3'], alt="")
+                    img(id = 'img_goods_4' src="images/goods_photo_800x650/"+photo[0]['image4'], alt="")
+                div(class = 'but-conteiner-goods')   
+                    button(id = 'button_slider_goods_1' onclick = 'goodsSliderClick(1)')  
+                    button(id = 'button_slider_goods_2' onclick = 'goodsSliderClick(2)')  
+                    button(id = 'button_slider_goods_3' onclick = 'goodsSliderClick(3)')  
+                    button(id = 'button_slider_goods_4' onclick = 'goodsSliderClick(4)')  
+            script(src="JS/goods-slider.js" type='text/javascript') 
+        div(class = 'info-item-goods')
+            div(class = 'brand-goods') #{item[0]['brand']}
+            div(class = 'price-goods') #{item[0]['price']} ₽
+            div(class = 'name-goods') #{item[0]['name']}
+            div(class = 'con-mini-img-goods')
+                button(class = 'mini-img-goods' onclick = 'goodsSliderClick(1)')
+                    img(id = 'img_goods_1' src="images/goods_photo_800x650/"+photo[0]['image1'], alt="")
+                button(class = 'mini-img-goods' onclick = 'goodsSliderClick(2)')
+                    img(id = 'img_goods_1' src="images/goods_photo_800x650/"+photo[0]['image2'], alt="")
+                button(class = 'mini-img-goods' onclick = 'goodsSliderClick(3)')
+                    img(id = 'img_goods_1' src="images/goods_photo_800x650/"+photo[0]['image3'], alt="")
+                button(class = 'mini-img-goods' onclick = 'goodsSliderClick(4)')
+                    img(id = 'img_goods_1' src="images/goods_photo_800x650/"+photo[0]['image4'], alt="")
+                div(class = 'chose-container')
+                    div(class = 'sizeListCon' id = 'sizeListCon')
+                        button(class = 'list' onclick = 'openSizeList(0)' id = 'buttonSizeUp')
+                            img(src="images/const_img/up.svg", alt="")
+                        div(class = 'sizeList')
+                            each val in size
+                                button(class = 'sizeNumb' id = 'sz'+ val['size'] onclick = 'choseASize('+ val['size'] + ')') #{val['size']} EU
+                                img(src="images/const_img/Vector1.svg", alt="")
+                    button(class = 'button-size' onclick = 'openSizeList(1)' id = 'buttonSizeDown') choose a size
+                        img(src="images/const_img/down.svg", alt="")
+                    input(type='submit' onclick = 'cartAdd('+ item[0]['id'] + ')' class = 'button-toCart' value = 'add to cart')
+    div(class = 'description-goods-con')
+        h2 Описание 
+        div(class = 'description-goods') #{item[0]['description']}
+include footer 

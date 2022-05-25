@@ -1,0 +1,13 @@
+div(id = 'loginDiv' class = 'win-con') 
+    form(id = 'log-form' action = '/login', method = 'POST') 
+        div(class = 'reg-con')
+            a(type = 'button' id = 'closeRegLog' class = 'closeRegLog' onclick = 'closeRegLog()')
+                img(src = 'images/const_img/close-svg.svg' alt = '')
+            h1 login 
+            div(class='reg-input-con')
+                input(type='email' placeholder='e-mail' id = 'log-email')
+            div(class='reg-input-con')
+                input(type='password' placeholder='Password' id = 'log-password')
+            input(type = "submit" class = 'reg-button' value = 'Login')
+            a(type = 'button' class = 'login' onclick = 'openRegWin()') registration
+            p(class = 'err' id = 'log-error' )

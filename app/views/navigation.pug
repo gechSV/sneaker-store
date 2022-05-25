@@ -1,0 +1,100 @@
+include header.pug
+div(class='menuBar')
+    nav
+        a(href="/" class = 'Logo-holder')  
+            img(
+                src = 'images/const_img/Logo.svg'
+                alt = 'BS'
+                )
+        a(href='#' target='') Unisex
+        a(href='#' target='') Man
+        a(href='#' target='') Women
+        div(class='search')
+            input(type="text"
+            placeholder='Search')
+            img(
+                class = 'palka'
+                src = 'images/const_img/palka-search.svg'
+                alt = ''
+            ) 
+            button(
+                type=''
+            )
+                img(
+                    class='search-logo'
+                    src='images/const_img/search.svg'
+                    alt='' 
+                )
+        div
+            if authorized == true
+                a(id = 'butUser' href = '/profile')
+                    img(src = 'images/const_img/user-logo.svg' alt = '')
+                a()
+                    img(src = 'images/const_img/heart-black.svg' alt = '')
+                a(id = 'butUser' href = '/cart')
+                    img(src = 'images/const_img/shopping-cart.svg' alt = '') 
+            else
+                a(id = 'butUser' type = 'button' onclick = 'openLogWin()')
+                    img(src = 'images/const_img/user-logo.svg' alt = '')
+                a()
+                    img(src = 'images/const_img/heart-black.svg' alt = '')
+                a()
+                    img(src = 'images/const_img/shopping-cart.svg' alt = '') 
+include registration
+include login
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- h2 my app
+//- p #{foo}
+//- h3 #{bar}
+//- each val, index in goods
+//-     p #{val['image']}
+//-     img(
+//-         src = 'images/' + val['image']
+//-         class = 'test' 
+//-     )

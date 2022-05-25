@@ -1,0 +1,26 @@
+include navigation
+div(class = 'profileNav')
+    div(class = 'infCon')
+        div(class = 'photoHolder')
+            img(src='images/const_img/user-logo-profile.svg', alt="")
+        div(class = 'nameMailCon')
+            div(class = 'userNameCon') #{user['name']} #{user['secondName']}
+            div(class = 'userMailCon') #{user['email']}
+    div(href = '#' class = 'navProfile')
+        div(class = 'navProfileImg')
+            img(src="images/const_img/heart-profile.svg", alt="")
+            div(class = 'navProfileText') Favourites
+    div(href = '#' class = 'navProfile')
+        div(class = 'navProfileImg')
+            img(src="images/const_img/delivery-profile.svg", alt="")
+            div(class = 'navProfileText') Delivery
+    div(href = '#' class = 'navProfile')
+        div(class = 'navProfileImg')
+            img(src="images/const_img/paycard-profile.svg", alt="")
+            div(class = 'navProfileText') Pay
+    div(href = '#' class = 'navProfile')
+        div(class = 'navProfileImg')
+            img(src="images/const_img/setting-profile.svg", alt="")
+            div(class = 'navProfileText') Setting
+include footer
+//- p #{user['name']}

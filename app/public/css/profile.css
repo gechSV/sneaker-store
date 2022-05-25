@@ -1,0 +1,91 @@
+.profileNav{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content:center; 
+	background: none;
+    gap: 20px;
+}
+
+.infCon{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 150px;
+
+}
+
+.photoHolder{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 25px 10px 25px 200px;
+}
+
+.mainUserInfCon{
+    margin: auto;
+    width: 100%;
+    height: 200px;
+    position: relative; 
+    padding: 0;
+    background: darkblue;
+}
+
+.navProfile{
+    margin: 0;
+    width: 500px;
+    height: 250px;
+    position: relative; 
+    padding: 0;
+    background: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #EC8100;
+    border-radius: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.nameMailCon{
+    width: auto;
+    height: auto;
+}
+
+.userNameCon{
+    position: relative;
+    width: 600px;
+    height: 40px;
+    font-size: 32px;
+    margin: 50px 580px 0 0;
+    font-family: 'Roboto', sans-serif;
+    color: #191919;
+    font-weight: bold;
+}
+
+.userMailCon{
+    position: relative;
+    width: 600px;
+    height: 40px;
+    font-size: 12px;
+    margin: 0px 580px 0 5px;
+    font-family: 'Roboto', sans-serif;
+    color: #191919;
+}
+
+.navProfileImg{
+   margin: 0;
+   height: 100px;
+}
+
+.navProfileText{
+    margin: 20px 0 0 0 ;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #191919;
+    font-weight: bold;
+}
